@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo, useRef } from 'react'
 import defaultUser from "../../public/assets/default.jpg"
-import { formatTimestamp } from '../utils/formatTimeStamp';
+import { formatTimestamp } from '../utils/formatTimestamp';
 import { RiSendPlaneFill } from 'react-icons/ri';
 import { messageData } from "../data/messageData";
 import {auth, listenForMessages, sendMessage} from "../firebase/firebase";
