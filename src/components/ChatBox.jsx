@@ -35,8 +35,8 @@ const ChatBox = ({selectedUser}) => {
 
     const sortedMessages = useMemo(() => {
         return [...messages].sort((a, b) => {
-            const aTimestamp = a.timestamp.seconds + a.timestamp.nanoseconds / 1e9;
-            const bTimestamp = b.timestamp.seconds + b.timestamp.nanoseconds / 1e9;
+            const aTimestamp = a?.timestamp?.seconds + a?.timestamp?.nanoseconds / 1e9;
+            const bTimestamp = b?.timestamp?.seconds + b?.timestamp?.nanoseconds / 1e9;
             return aTimestamp - bTimestamp;
         });
     }, [messages]);

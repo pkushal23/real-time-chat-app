@@ -98,7 +98,7 @@ const Chatlist = ({ setSelectedUser }) => {
                                             <p className="p-0 font-light text-[#2A3d39] text-left text-[14px]">{chat?.lastMessage}</p>
                                         </span>
                                     </div>
-                                    <p className="p-0 font-regular text-gray-400 text-left text-[11px]">{formatTimestamp(chat?.lastMessageTimestamp)}</p>
+                                    <p className="p-0 font-regular text-gray-400 text-left text-[11px]">{formatTimestamp(chat?.lastMessageTimeStamp)}</p>
                                 </>
                             ))}
                     </button>
