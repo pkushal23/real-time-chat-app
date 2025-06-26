@@ -38,14 +38,13 @@ const Chatlist = ({ setSelectedUser }) => {
 
 
     const sortedChats = useMemo(() => {
-    return [...chats]
-    .filter(chat => chat?.lastMessageTimestamp?.seconds !== undefined && chat?.lastMessageTimestamp?.nanoseconds !== undefined)
-    .sort((a, b) => {
-        const aTimestamp = a.lastMessageTimestamp.seconds + a.lastMessageTimestamp.nanoseconds / 1e9;
-        const bTimestamp = b.lastMessageTimestamp.seconds + b.lastMessageTimestamp.nanoseconds / 1e9;
-        return bTimestamp - aTimestamp;
-    });
-}, [chats]);
+        return [...chats].sort((a, b) => {
+            const aTimestamp = a?.lastMessageTimestamp?.seconds + a?.lastMessageTimestamp?.nanoseconds / 1e9;
+            const bTimestamp = b?.lastMessageTimestamp?.seconds + b?.lastMessageTimestamp?.nanoseconds / 1e9;
+
+            return bTimestamp - aTimestamp;
+        });
+    }, [chats]);
 
 
     const startChat = (user) => {
