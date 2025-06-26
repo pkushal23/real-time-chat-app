@@ -3,7 +3,7 @@ import defaultUser from "../../public/assets/default.jpg"
 import { RiMore2Fill } from 'react-icons/ri'
 import SearchModel from './SearchModel'
 import chatData from '../data/chats'
-import { formatTimestamp } from '../utils/formatTimeStamp'
+import { formatTimestamp } from '../utils/formatTimestamp'
 import { listenForChats, auth, db } from '../firebase/firebase'
 import {doc, onSnapshot} from "firebase/firestore"
 import ProfileSettings from './ProfileSettings'
